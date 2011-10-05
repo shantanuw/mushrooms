@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  color: MyString
+  name: MyString
+  type: 
+  poisonous: false
+
+two:
+  color: MyString
+  name: MyString
+  type: 
+  poisonous: false
