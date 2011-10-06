@@ -3,11 +3,11 @@
 one:
   color: MyString
   name: MyString
-  type: 
+  mushroom_type: MyString
   poisonous: false
 
 two:
   color: MyString
   name: MyString
-  type: 
+  mushroom_type: MyString
   poisonous: false

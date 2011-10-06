@@ -1,0 +1,12 @@
+<% if @mushroom.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@mushroom.errors.count, "error") %> 
+        prohibited this mushroom from being saved:</h2>
+    <p>There were problems with the following fields:</p>
+    <ul>
+    <% @mushroom.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

@@ -1,2 +1,25 @@
-<h1>Mushrooms#new</h1>
-<p>Find me in app/views/mushrooms/new.html.erb</p>
+<h1>Add Mushrooms</h1>
+
+<%= form_for(@mushroom) do |f| %>
+  <%= render 'shared/error_messages' %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br />
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.label :mushroom_type %><br />
+    <%= f.text_field :mushroom_type %>
+  </div>
+  <div class="field">
+    <%= f.label :poisonous %><br />
+	<%= f.radio_button :poisonous, "1", :checked => true %> True
+	<%= f.radio_button :poisonous, "0" %> False
+  </div>
+  <div class="actions">
+    <%= f.submit "Add this mushroom" %>
+  </div>
+<% end %>

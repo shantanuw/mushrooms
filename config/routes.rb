@@ -1,4 +1,6 @@
 Mushrooms::Application.routes.draw do
+  resources :mushrooms
+  
   get "mushrooms/new"
 
   get "pages/home"

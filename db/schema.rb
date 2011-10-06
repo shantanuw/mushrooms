@@ -11,12 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111005222536) do
+ActiveRecord::Schema.define(:version => 20111006001228) do
 
   create_table "mushrooms", :force => true do |t|
     t.string   "color"
     t.string   "name"
-    t.string   "type"
+    t.string   "mushroom_type"
     t.boolean  "poisonous"
     t.datetime "created_at"
     t.datetime "updated_at"
