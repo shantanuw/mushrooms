@@ -1,0 +1,9 @@
+<h1>All Mushrooms</h1>
+<%= will_paginate %>
+<ul class="mushrooms">
+  <% @mushrooms.each do |mushroom| %>
+    <li>
+      <%= link_to mushroom.name, mushroom %>
+    </li>
+  <% end %>
+</ul>
