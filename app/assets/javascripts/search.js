@@ -15,7 +15,8 @@ function searchMushrooms() {
 	var type = jQ("#typeSB").val();
 	var poison = jQ('input[name=poisonousRB]:checked').val();
 	
-	var q = "name=" + name + "&color=" + color + "&type=" + type + "&poisonous=" + poison;
+	var q = "name=" + name + "&color=" + color + "&type=" + type;
+	if (poison != undefined) q += "&poisonous=" + poison;
 	//alert(q);
 	
 	jQ.ajax({
