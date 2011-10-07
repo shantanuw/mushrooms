@@ -5,8 +5,30 @@
 </p>
 
 <form>
-	<input type="text" id="searchBox" size="40" />
-	<input type="submit" id="submit" class="search_button round" value="Search" />
+	<div class="field">
+		<label for="searchBox">Name</label><br />
+		<input type="text" class="searchBox" id="nameSB" size="40" autocomplete="off" />
+		<div id="name_suggest" class="suggestBox">
+	</div>
+	<div class="field">
+		<label for="searchBox">Color</label><br />
+		<input type="text" class="searchBox" id="colorSB" size="40" autocomplete="off" />
+		<div id="color_suggest" class="suggestBox">
+	</div>
+	<div class="field">
+		<label for="searchBox">Type</label><br />
+		<input type="text" class="searchBox" id="typeSB" size="40" autocomplete="off" />
+		<div id="type_suggest" class="suggestBox">
+	</div>
+	<div class="field">
+		<label for="searchBox">Poisonous</label>
+		<input type="radio" name="poisonousRB" value="t" /> True
+		<input type="radio" name="poisonousRB" value="f" /> False
+	</div>
+
+	<div class="actions">
+		<input type="submit" id="submit" class="search_button round" value="Search" />
+	</div>
 </form>
 
 <div id="result">

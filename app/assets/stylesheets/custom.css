@@ -163,7 +163,7 @@ div.field, div.actions {
   list-style: none;
 }
 
-#searchBox {
+.searchBox {
   font-size: 20px;
 }
 
@@ -173,4 +173,26 @@ div.field, div.actions {
 
 #result {
   margin-top: 30px;
+}
+
+.suggestBox {
+	position: absolute; 
+	background-color: #FFFFFF; 
+	text-align: left; 
+	border-left: 1px solid #000000;	
+	border-right: 1px solid #000000;	
+	border-bottom: 1px solid #000000;
+	border-top: none;
+	margin-top: -10px;
+	width: 378px;
+	display: none;
+}
+
+.suggest_link {
+	background-color: #FFFFFF;
+	padding: 2px 6px 2px 6px;
+}
+.suggest_link_over {
+	background-color: #3366CC;
+	padding: 2px 6px 2px 6px;
 }

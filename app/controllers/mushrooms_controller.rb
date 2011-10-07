@@ -27,12 +27,41 @@ class MushroomsController < ApplicationController
   def search
 	
 	star = "%"
-	@name = star + params[:name] + star
-	@color = star + params[:color] + star
-	@type = star + params[:type] + star
+	query = ""
+	
+	@name = params[:name]
+	if @name != nil && !@name.empty?
+		query = query + "name LIKE '" + star + @name + star + "'"	
+	end
+	
+	@color = params[:color]
+	if @color != nil && !@color.empty?
+		if query != ""
+			query = query + "and color LIKE '" + star + @color + star + "'"
+		else 
+			query = query + "color LIKE '" + star + @color + star + "'"
+		end
+	end
+	
+	@type = params[:type]
+	if @type != nil && !@type.empty?
+		if query != ""
+			query = query + "and mushroom_type LIKE '" + star + @type + star + "'"
+		else 
+			query = query + "mushroom_type LIKE '" + star + @type + star + "'"
+		end
+	end
+	
 	@poisonous = params[:poisonous]
-    
-	@mushrooms = Mushroom.find(:all, :conditions => [ "name LIKE ? or color like ? or mushroom_type like ? or poisonous = ?", @name, @color, @type, @poisonous])
+	if @poisonous != nil && !@poisonous.empty?
+		if query != ""
+			query = query + "and poisonous = '" + @poisonous + "'"
+		else 
+			query = query + "poisonous = '" + @poisonous + "'"
+		end
+	end
+	
+	@mushrooms = Mushroom.where(query)
 	
 	
 	respond_to do |format|
